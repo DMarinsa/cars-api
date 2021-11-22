@@ -23,10 +23,16 @@ env-cmd -f .env.example npm start
 
 This will start an instance of the package on localhost:3000
 
+Another way to do it is using Make, You'll have to have make installed and use
+
+```sh
+make setup
+make up
+```
+
 #### Still to Do
 
 * Add testing
-* Dockerize the app
 * Add features about news on each car.
 
 #### License
