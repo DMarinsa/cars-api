@@ -20,11 +20,11 @@ export class Database {
       }
     } else {
       const connectionOptions: ConnectionOptions = {
-        name: 'default',
+        name: process.env.DB_NAME || 'default',
         type: 'mongodb',
-        host: 'localhost',
-        port: 27017,
-        database: 'cars',
+        host: process.env.DB_HOST || 'localhost',
+        port: Number.parseInt(process.env.DB_PORT as string) || 27017,
+        database: process.env.DB_SET || 'cars',
         synchronize: false,
         useUnifiedTopology: true,
         logging: true,
