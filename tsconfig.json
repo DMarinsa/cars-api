@@ -4,8 +4,8 @@
         "esModuleInterop": true,
         "target": "es6",
         "noImplicitAny": true,
+        "typeRoots": ["./node_modules/@types"],
         "moduleResolution": "node",
-        "types": [],
         "sourceMap": true,
         "strictPropertyInitialization": false,
         "outDir": "dist",
@@ -26,6 +26,5 @@
     "compileOnSave": true,
     "include": [
         "src/**/*",
-        "test/**/*"
     ]
 }
