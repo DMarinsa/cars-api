@@ -1,7 +1,7 @@
 {
-  "name": "node-boilerplate",
+  "name": "cars-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cars manager",
   "main": "index.js",
   "scripts": {
     "test": "mocha --config ./mocharc.jsonc",
@@ -11,7 +11,7 @@
     "clean": "rm -rf dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Marin",
   "license": "ISC",
   "dependencies": {
     "@types/jest": "^27.0.3",
