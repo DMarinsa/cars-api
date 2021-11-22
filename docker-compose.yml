@@ -1,0 +1,42 @@
+version: '3.6'
+networks:
+  default:
+    name: cars
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["yarn", "start"]
+    ports:
+      - 3000:3000
+    user: node
+    env_file:
+      - .env.example
+    environment:
+      - DB_TESTING_CONNECTION_STRING=mongodb://mongo:27017/cars
+    volumes:
+      - node_modules:/usr/src/app/node_modules/
+      - dist:/usr/src/app/dist/
+      - tmp:/usr/src/app/tmp
+      - logs:/usr/src/app/logs
+      - type: bind
+        source: .
+        target: /usr/src/app/
+  mongodb:
+    image: mongo:4.4.3-bionic
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+    logging:
+      driver: none
+
+
+volumes:
+  node_modules:
+  dist:
+  mongo:
+  tmp:
+  logs:
+

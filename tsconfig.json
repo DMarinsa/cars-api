@@ -8,7 +8,7 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "strictPropertyInitialization": false,
-        "outDir": "dist",
+        "outDir": "./dist",
         "baseUrl": "./",
         "paths": {
             "*": [

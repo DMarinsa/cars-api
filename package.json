@@ -8,7 +8,7 @@
     "test:unit": "jest -c jest.config.unit.js --maxWorkers=50%",
     "test:integration": "jest -c jest.config.integration.js --runInBand",
     "start": "node ./dist",
-    "build": "tsc -p tsconfig-build.json",
+    "build": "tsc -p tsconfig.json",
     "prestart": "npm run build",
     "clean": "rm -rf dist"
   },
