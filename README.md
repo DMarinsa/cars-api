@@ -23,7 +23,7 @@ env-cmd -f .env.example npm start
 
 This will start an instance of the package on localhost:3000
 
-Another way to do it is using Make, You'll have to have make installed and use
+Another way to do it is using Make, You'll have to have make installed and use (still in progress might fail)
 
 ```sh
 make setup
